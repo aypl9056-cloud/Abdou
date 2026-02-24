@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eFootball Mobile - تسجيل الدخول</title>
+    <style>
+        /* ألوان مستوحاة من eFootball Mobile */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1f3c88, #0a1f3a);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+        .login-container {
+            background-color: rgba(0,0,0,0.7);
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            width: 320px;
+            text-align: center;
+        }
+        .login-container h1 {
+            margin-bottom: 10px;
+            font-size: 28px;
+            color: #ffd700; /* لون ذهبي للعنوان */
+        }
+        .login-container p {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4caf50; /* أخضر جذاب */
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .message {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .details {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #aaa;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h1>eFootball Mobile</h1>
+    <p>مرحبا بك! سجّل الدخول للمتابعة والاستمتاع باللعبة.</p>
+
+    <input type="text" id="username" placeholder="اسم المستخدم">
+    <input type="password" id="password" placeholder="كلمة المرور">
+    <button onclick="login()">دخول</button>
+
+    <div class="message" id="message"></div>
+
+    <div class="details">
+        ⚽ العب مباريات سريعة مع أصدقائك<br>
+        🏆 اربح كوينز وطور فريقك<br>
+        🎮 استمتع بأسلوب لعب كرة القدم الاحترافي
+    </div>
+</div>
+
+<script>
+    function login() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const message = document.getElementById('message');
+
+        // مثال بسيط: اسم المستخدم "player" وكلمة المرور "2026"
+        if(username === "player" && password === "2026") {
+            message.style.color = "lightgreen";
+            message.innerText = "تم تسجيل الدخول بنجاح! 🎉";
+        } else {
+            message.style.color = "#ff4d4d";
+            message.innerText = "اسم المستخدم أو كلمة المرور خاطئة!";
+        }
+    }
+</script>
+
+</body>
+</html>
